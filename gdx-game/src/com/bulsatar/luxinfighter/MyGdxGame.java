@@ -4,7 +4,7 @@ import com.badlogic.gdx.*;
 import com.badlogic.gdx.graphics.*;
 import com.badlogic.gdx.graphics.g2d.*;
 
-public class MyGdxGame implements ApplicationListener
+public class MyGdxGame implements InputProcessor,ApplicationListener
 {
 	Texture texture;
 	SpriteBatch batch;
@@ -46,4 +46,44 @@ public class MyGdxGame implements ApplicationListener
 	public void resume()
 	{
 	}
+
+    @Override
+    public boolean keyDown(int i) {
+        return false;
+    }
+
+    @Override
+    public boolean keyUp(int i) {
+        return false;
+    }
+
+    @Override
+    public boolean keyTyped(char c) {
+        return false;
+    }
+
+    @Override
+    public boolean touchDown(int i, int i2, int i3, int i4) {
+        return false;
+    }
+
+    @Override
+    public boolean touchUp(int i, int i2, int i3, int i4) {
+        return false;
+    }
+
+    @Override
+    public boolean touchDragged(int i, int i2, int i3) {
+        return false;
+    }
+
+    @Override
+    public boolean mouseMoved(int i, int i2) {
+        return false;
+    }
+
+    @Override
+    public boolean scrolled(int i) {
+        return false;
+    }
 }
